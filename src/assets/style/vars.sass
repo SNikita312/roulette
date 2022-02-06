@@ -1,0 +1,142 @@
+$active-blue: #0061A2
+$static-blue: #18A0FB
+$hover-blue: #0099FF
+$hover-red: #E20606
+$active-red: #880000
+$white: #FFFFFF
+$grey: #D9D9D9
+$black: #000000
+$black-light: #0C111C
+$blue-dark: #141A29
+$blue-regular: #252D40
+$grey-dark: #393939
+$plus-color: #0086E0
+
+
+=standard-link($font-size)
+  font-family: Roboto, sans-serif
+  font-weight: normal
+  color: $static-blue
+  font-size: $font-size
+  line-height: 135%
+  cursor: url(../img/cursor.png), pointer
+  &:hover
+    color: #FFFFFF
+  &:active
+    color: #888888
+=header-links()
+  font-size: 17px
+  line-height: 150%
+  color: $white
+  font-family: Roboto, sans-serif
+  font-weight: normal
+  cursor: url(../img/cursor.png), pointer
+  &:hover
+    color: $static-blue
+  &:active
+    color: $grey
+=standard-button($width, $font-size)
+  background: $static-blue
+  border-radius: 6px
+  padding: 7px 0
+  width: $width
+  font-family: Roboto, sans-serif
+  font-size: $font-size
+  line-height: 150%
+  color: $white
+  border: 1px solid $static-blue
+  cursor: url(../img/cursor.png), pointer
+  &:hover
+    -webkit-box-shadow: 0 3px 19px rgba(0, 153, 255, 0.41)
+    box-shadow: 0 3px 19px rgba(0, 153, 255, 0.41)
+    background: $hover-blue
+    border: 1px solid $hover-blue
+  &:active
+    background: $active-blue
+    -webkit-box-shadow: none
+    box-shadow: none
+    border: 1px solid $active-blue
+  &:disabled
+    background: $grey
+    color: #B1B1B1
+    border: 1px solid $grey
+    cursor: default
+    &:hover
+      box-shadow: none
+      -webkit-box-shadow: none
+=blue-button($width, $font-size)
+  background: none
+  border-radius: 6px
+  padding: 7px 0
+  width: $width
+  font-family: Roboto, sans-serif
+  font-weight: normal
+  font-size: $font-size
+  line-height: 150%
+  color: $static-blue
+  border: 1px solid $static-blue
+  cursor: url(../img/cursor.png), pointer
+  &:hover
+    -webkit-box-shadow: 0 3px 19px rgba(0, 153, 255, 0.41)
+    box-shadow: 0 3px 19px rgba(0, 153, 255, 0.41)
+    background: $hover-blue
+    border: 1px solid $hover-blue
+    color: $white
+  &:active
+    background: $active-blue
+    border: 1px solid $active-blue
+    -webkit-box-shadow: none
+    box-shadow: none
+    color: $white
+=red-button($padding-lr, $font-size)
+  background: none
+  border-radius: 6px
+  padding: 7px $padding-lr
+  font-family: Roboto, sans-serif
+  font-weight: normal
+  font-size: $font-size
+  line-height: 150%
+  color: $white
+  border: 1px solid $white
+  cursor: url(../img/cursor.png), pointer
+  &:hover
+    -webkit-box-shadow: 0 3px 8px rgba(193, 0, 0, 0.31)
+    box-shadow: 0 3px 8px rgba(193, 0, 0, 0.31)
+    background: $hover-red
+    border: 1px solid $hover-red
+  &:active
+    background: $active-red
+    border: 1px solid $active-red
+    -webkit-box-shadow: none
+    box-shadow: none
+=flex-block($content)
+  display: -webkit-box
+  display: -ms-flexbox
+  display: flex
+  -webkit-box-pack: $content
+  -ms-flex-pack: $content
+  justify-content: $content
+
+=grid-block()
+  display: -ms-grid
+  display: grid
+=transform($prop)
+  -webkit-transform: $prop
+  -ms-transform: $prop
+  transform: $prop
+=transition($prop)
+  -webkit-transition: $prop
+  -o-transition: $prop
+  transition: $prop
+=width-fit-content()
+  width: -webkit-fit-content
+  width: -moz-fit-content
+  width: fit-content
+=height-fit-content()
+  height: -webkit-fit-content
+  height: -moz-fit-content
+  height: fit-content
+
+
+
+
